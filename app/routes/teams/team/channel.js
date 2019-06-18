@@ -5,7 +5,7 @@ export default class TeamsTeamChannelRoute extends Route {
     const { channels } = this.modelFor('teams.team');
 
     const matches = channels.filter(({ id }) => {
-      channelId === id;
+      return channelId === id;
     });
 
     return matches[0];

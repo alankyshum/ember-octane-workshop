@@ -14,8 +14,8 @@ module('Acceptance | logout', function(hooks) {
   test('visiting /teams and logout', async function(assert) {
     const auth = this.owner.lookup('service:auth');
     auth._setUserId(1);
-    await visit('/teams');
-    assert.equal(currentURL(), '/teams');
+    await visit('/teams/linkedin/recruiting');
+    assert.equal(currentURL(), '/teams/linkedin/recruiting');
 
     /**
      * INFO: using `pauseTest` to pause the test and allow interactions

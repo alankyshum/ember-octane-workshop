@@ -1,4 +1,5 @@
 import Service, { inject as service } from '@ember/service';
+import { action } from '@ember/object';
 
 const USER_KEY = 'shlack-userid';
 
@@ -10,6 +11,10 @@ export default class AuthService extends Service {
   }
 
   _setUserId(userId) {
+    if (!userId) {
+      return window.localStorage.removeItem(USER_KEY);
+    }
+
     return window.localStorage.setItem(USER_KEY, userId);
   }
 
@@ -22,8 +27,9 @@ export default class AuthService extends Service {
     this.router.transitionTo('teams');
   }
 
+  @action
   logout() {
-    window.localStorage.removeItem(USER_KEY);
+    this._setUserId(null);
     this.router.transitionTo('login');
   }
 }

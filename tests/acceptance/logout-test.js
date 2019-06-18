@@ -10,6 +10,9 @@ module('Acceptance | logout', function(hooks) {
     await visit('/teams');
     assert.equal(currentURL(), '/teams');
 
+    /**
+     * INFO: using `pauseTest` to pause the test and allow interactions
+     */
     // await pauseTest();
     await click('.team-sidebar__logout-button');
     assert.equal(currentURL(), '/login');

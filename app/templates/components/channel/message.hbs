@@ -7,16 +7,16 @@
   <div class="flex-1">
     <h5 class="text-sm">
       <a href="#" class="message__user-name text-black font-bold no-underline hover:underline">
-        Lisa Huang-North
+        {{@message.userId}}
       </a>
       <span class="sr-only">at</span>
       <time class="message__timestamp text-grey-darker text-xs font-normal">
-        {{format-timestmap "04-21-2019 12:21:38 PM"}}
+        {{format-timestmap @message.createdAt}}
       </time>
     </h5>
 
     <p class="message__body text-black leading-normal">
-      Would you like to join my professional network?
+      {{@message.body}}
     </p>
   </div>
 

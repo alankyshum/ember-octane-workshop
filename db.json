@@ -222,7 +222,9 @@
       "channelId": "general",
       "userId": 1,
       "body": "awqwdqwqwdq",
-      "enrichedBody": ["awqwdqwqwdq"],
+      "enrichedBody": [
+        "awqwdqwqwdq"
+      ],
       "createdAt": 1555872270175,
       "id": 14
     },
@@ -569,6 +571,66 @@
       "userId": "1",
       "createdAt": 1556683077121,
       "id": 57
+    },
+    {
+      "body": {
+        "isTrusted": true
+      },
+      "teamId": "angrycat",
+      "channelId": "dominate",
+      "userId": "1",
+      "createdAt": 1560904572575,
+      "id": 58
+    },
+    {
+      "body": {
+        "isTrusted": true
+      },
+      "teamId": "angrycat",
+      "channelId": "dominate",
+      "userId": "1",
+      "createdAt": 1560904717380,
+      "id": 59
+    },
+    {
+      "body": {
+        "isTrusted": true
+      },
+      "teamId": "angrycat",
+      "channelId": "dominate",
+      "userId": "1",
+      "createdAt": 1560904898946,
+      "id": 60
+    },
+    {
+      "body": {
+        "isTrusted": true
+      },
+      "teamId": "angrycat",
+      "channelId": "dominate",
+      "userId": "1",
+      "createdAt": 1560904911220,
+      "id": 61
+    },
+    {
+      "body": {
+        "isTrusted": true
+      },
+      "teamId": "angrycat",
+      "channelId": "dominate",
+      "userId": "1",
+      "createdAt": 1560904935658,
+      "id": 62
+    },
+    {
+      "body": {
+        "isTrusted": true
+      },
+      "teamId": "angrycat",
+      "channelId": "dominate",
+      "userId": "1",
+      "createdAt": 1560904971433,
+      "id": 63
     }
   ]
 }

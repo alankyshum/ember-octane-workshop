@@ -1,8 +1,8 @@
-import { module, test, skip } from 'qunit';
-import { visit, currentURL, fillIn, click, pauseTest } from '@ember/test-helpers';
+import { click, currentURL, fillIn, visit } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
-import StubbedAuthService from '../stubs/auth-service';
 import Pretender, { ResponseHandler } from 'pretender';
+import { module, test } from 'qunit';
+import StubbedAuthService from '../stubs/auth-service';
 
 /**
  *

@@ -17,7 +17,7 @@ export default class AuthService extends Service {
 
   _setUserId(userId) {
     if (!userId) {
-      return this.cookies.write(USER_KEY);
+      return this.cookies.clear(USER_KEY);
     }
 
     return this.cookies.write(USER_KEY, userId);

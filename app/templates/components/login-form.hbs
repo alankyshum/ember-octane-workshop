@@ -12,7 +12,7 @@
         >
           <option selected={{not this.userId}} value="" disabled>Select a user</option>
           {{#each @users as |user|}}
-            <option selected={{eq this.userId user.id}} value={{user.id}}>{{user.name}}</option>
+            <option selected={{eq this.userId (concat user.id "")}} value={{user.id}}>{{user.name}}</option>
           {{/each}}
         </select>
         <div

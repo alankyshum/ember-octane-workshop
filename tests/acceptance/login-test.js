@@ -88,6 +88,6 @@ module('Acceptance | login', function(hooks) {
     await fillIn('select', '1');
     await click('[type="submit"]');
 
-    assert.equal(currentURL(), '/teams/linkedin/recruitings');
+    assert.equal(currentURL(), '/teams/gh/prs');
   });
 });

@@ -7,19 +7,20 @@ const USER_KEY = 'shlack-userid';
 
 export default class AuthService extends Service {
   @service router;
+  @service cookies;
 
   @tracked currentUser = null;
 
   get _getUserId() {
-    return window.localStorage.getItem(USER_KEY);
+    return this.cookies.read(USER_KEY);
   }
 
   _setUserId(userId) {
     if (!userId) {
-      return window.localStorage.removeItem(USER_KEY);
+      return this.cookies.write(USER_KEY);
     }
 
-    return window.localStorage.setItem(USER_KEY, userId);
+    return this.cookies.write(USER_KEY, userId);
   }
 
   get currentUserId() {
@@ -27,7 +28,7 @@ export default class AuthService extends Service {
   }
 
   loginWithUserId(userId) {
-    window.localStorage.setItem(USER_KEY, userId);
+    this._setUserId(userId);
     this.router.transitionTo('teams');
   }
 

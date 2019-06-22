@@ -48,6 +48,7 @@ export default class ChannelContainerComponent extends Component {
   async loadMessages() {
     // api/teams/li/channels/general/messages
     const { channel } = this.args;
+    if (!channel) return;
     const resp = await fetch(`/api/teams/${channel.teamId}/channels/${channel.id}/messages`);
     this.messages = await resp.json();
   }
